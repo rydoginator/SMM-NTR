@@ -1,0 +1,8 @@
+Brick: 00
+Brick ?: 01
+Mushroom: 09
+Fire flower: 0A
+Bowser: 2D
+Mario: 45
+Giant mushroom:4D
+Mysterious mushroom: 4E
