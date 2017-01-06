@@ -38,7 +38,7 @@ void	triple_speed(void);
 void	ten_speed(void);
 void	flying_mario(void);
 void	invincible(void);
-void	get_medals(void);
+void	unlock_medals(void);
 void	coordMod(void);
 void	item_mod(void);
 void 	decreaseObjectLimit(void);

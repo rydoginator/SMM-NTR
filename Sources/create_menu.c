@@ -13,6 +13,7 @@ char	*builder_name = "RyDog";
     static const char * const speed_note = "Use the D Pad";
     static const char * const grd_note = "Animation doesn't play";
     static const char * const obj_note = "Going over the object limit may cause you to crash.";
+    static const char * const kys_note = "Press L+R+A+B to kill yourself.";
 
 
 void with_note_common(const char *name, const char *note, void (*cheatfunction)(void), int type)
@@ -56,7 +57,7 @@ void	my_menus(void)
 	//int index;
 	int i;
 	
-	new_unselectable_entry("Mario Maker NTR Cheats Ver 1.1");
+	new_unselectable_entry("Mario Maker NTR Cheats Ver 1.1.1");
 	update_live_entry();
     update_item_entry();
 	new_spoiler_with_note("Lives Codes", live_note);
@@ -68,7 +69,7 @@ void	my_menus(void)
     exit_spoiler();
     new_spoiler("Conditions");
     	new_entry_with_note("Star Invincibility", star_note, star_inf);
-        new_entry_with_note("Invincibility without Star", inv_note, invincible);
+        new_entry_with_note("Invincibility", inv_note, invincible);
     	new_spoiler("Mario State Modifer");
     		new_radio_entry("Small Mario", sm_mario);
     		new_radio_entry("Big Mario ", bg_mario);
@@ -80,8 +81,9 @@ void	my_menus(void)
     exit_spoiler();
     new_spoiler("Item Modifier");
         new_unselectable_entry(item_level_buffer);
-        g_increase_item_index = new_entry("Go up", increase_item_level);
-        g_decrease_item_index = new_entry("Go down", decrease_item_level);
+        g_increase_item_index = new_entry("Increase Item ID", increase_item_level);
+        g_decrease_item_index = new_entry("Decrease Item ID", decrease_item_level);
+    exit_spoiler();
     new_spoiler("Points Modifier");
     	new_radio_entry("0 Points", zero_pts);
     	new_radio_entry("999999999 Points", lot_pts);
@@ -93,13 +95,13 @@ void	my_menus(void)
         new_radio_entry("10x", ten_speed);
     exit_spoiler();
     new_spoiler("Miscellaneous Codes");
-        new_entry_with_note("Use Ground Pound in SMB2", grd_note, groundPound);
+        new_entry_with_note("Use Ground Pound in SMB1", grd_note, groundPound);
         new_entry_with_note("Coordinates Modifier", cm_note, coordMod);
         //new_entry("Hold B to fly", flying_mario);
-        new_entry_with_note("Get medals", medal_note, get_medals);
+        new_entry_with_note("Get all medals", medal_note, unlock_medals);
     	new_entry("Unlimited Time", time_inf);
-    	new_entry("Press L+R+A+B To Kill Yourself", kys);
-        new_entry_with_note("Decrease Object Limit", obj_note, decreaseObjectLimit);
+    	new_entry_with_note("Kill Yourself Note", kys_note, kys);
+        new_entry_with_note("No Object Limit", obj_note, decreaseObjectLimit);
     exit_spoiler();
 
     

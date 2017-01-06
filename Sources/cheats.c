@@ -132,7 +132,7 @@ void	star_inf(void)
 {
 	if (READU16(0x335FEB4D) == 0x0001)
 	{	
-		WRITEU8(0x317B9F0C, 0x0A);
+		WRITEU16(0x317B9F0C, 0x0008);
 	}
 }
 
@@ -331,13 +331,13 @@ void	invincible(void)
 {
 	if (READU16(0x335FEB4D) == 0x0001)
 	{
-		WRITEU16(0x317B9EE4, 0xFFD6);
+		WRITEU16(0x317B9EE4, 0x000C);
 	}
 }
 
-void	get_medals(void)
+void	unlock_medals(void)
 {
-	WRITEU32(0x30558868, 0xE3A00001);
+	WRITEU32(0x5586F8, 0xE3A00001);
 }
 
 void	coordMod(void)
@@ -351,7 +351,7 @@ void	coordMod(void)
 			offset = READU32(0x704FD0);
 			offset = READU32(0x10 + offset);
 			offset += 0xC8;
-			ADDTOFLOAT(offset, 0.5);
+			ADDTOFLOAT(offset, 0.6);
 		}
 	}
 	if(is_pressed(BUTTON_Y + BUTTON_DD))
@@ -361,7 +361,7 @@ void	coordMod(void)
 			offset = READU32(0x704FD0);
 			offset = READU32(0x10 + offset);
 			offset += 0xC8;
-			SUBTOFLOAT(offset, 0.5);
+			SUBTOFLOAT(offset, 0.6);
 		}
 	}
 	if(is_pressed(BUTTON_Y + BUTTON_DL))
@@ -371,7 +371,7 @@ void	coordMod(void)
 			offset = READU32(0x704FD0);
 			offset = READU32(0x10 + offset);
 			offset += 0xC4;
-			SUBTOFLOAT(offset, 0.5);
+			SUBTOFLOAT(offset, 0.35);
 		}
 	}
 	if(is_pressed(BUTTON_Y + BUTTON_DR))
@@ -381,7 +381,7 @@ void	coordMod(void)
 			offset = READU32(0x704FD0);
 			offset = READU32(0x10 + offset);
 			offset += 0xC4;
-			ADDTOFLOAT(offset, 0.5);
+			ADDTOFLOAT(offset, 0.35);
 		}
 	}
 	offset = 0;
