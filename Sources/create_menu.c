@@ -6,7 +6,7 @@ char	*builder_name = "RyDog";
 
     static const char * const live_note = "Sets your lives!";
     static const char * const inst_note = "Collect coins to instatnly level up!";
-    static const char * const star_note = "Ever lasting star!";
+    static const char * const star_note = "Infinite star!";
     static const char * const inv_note = "Invincibility without star!";
     static const char * const medal_note = "Finish the course to acquire all the medals!";
     static const char * const cm_note = "Press Y + D Pad to move in the direction that you want!";
@@ -57,7 +57,7 @@ void	my_menus(void)
 	//int index;
 	int i;
 	
-	new_unselectable_entry("Mario Maker NTR Cheats Ver 1.1.1");
+	new_unselectable_entry("Mario Maker NTR Cheats Ver 1.2.2");
 	update_live_entry();
     update_item_entry();
 	new_spoiler_with_note("Lives Codes", live_note);
